@@ -1,18 +1,19 @@
-﻿public class Animal
+﻿// Base class contains behaviors shared by all animals
+public class Animal
 {
     public void Eat()
     {
-        Console.WriteLine("Animal is eating");
+        Console.WriteLine($"{this.GetType().Name} is Eating");
     }
 
 
     public void Sleep()
     {
-        Console.WriteLine("Animal is Sleeping");
+        Console.WriteLine($"{this.GetType().Name} is Sleeping");
     }
 
 }
-
+// Dog inherits Eat() and Sleep() from Animal
 public class Dog : Animal
 {
     public void Bark()
